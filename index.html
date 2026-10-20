@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apex Literary Team | Professional Book Marketing & Author Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--fh:'Playfair Display',Georgia,serif;--fb:'Inter',system-ui,sans-serif;--fm:'DM Sans',sans-serif;--fc:'Space Grotesk',monospace;--n9:#0C1629;--n8:#12203B;--n7:#1B3154;--n6:#22426C;--b6:#2563EB;--b5:#3B82F6;--b4:#60A5FA;--b3:#93BBFD;--c5:#06B6D4;--c4:#22D3EE;--c3:#67E8F9;--em5:#10B981;--em4:#34D399;--am5:#F59E0B;--am4:#FBBF24;--ro5:#F43F5E;--s50:#F8FAFC;--s100:#F1F5F9;--s200:#E2E8F0;--s400:#94A3B8;--s500:#64748B;--s600:#475569;--s800:#1E293B;--s900:#0F172A;--w:#FFF;--rl:1rem;--rs:.5rem;--tr:.3s ease;--sh:0 25px 60px -12px rgba(0,0,0,.35)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--fb);background:var(--n9);color:var(--s200);line-height:1.7;overflow-x:hidden}
+body.loaded .preloader{opacity:0;visibility:hidden;pointer-events:none}
+::selection{background:var(--b5);color:var(--w)}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--n9)}
+::-webkit-scrollbar-thumb{background:var(--n7);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--b6)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+.preloader{position:fixed;inset:0;background:var(--n9);display:flex;align-items:center;justify-content:center;z-index:10000;transition:opacity .8s ease,visibility .8s ease}
+.pl-wrap{text-align:center}
+.pl-logo{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 24px;animation:plPulse 1.5s ease-in-out infinite;border:3px solid var(--b5);box-shadow:0 0 50px rgba(37,99,235,.35)}
+@keyframes plPulse{0%,100%{transform:scale(1);box-shadow:0 0 40px rgba(37,99,235,.3)}50%{transform:scale(1.1);box-shadow:0 0 70px rgba(37,99,235,.55)}}
+.pl-bar{width:220px;height:3px;background:var(--n7);border-radius:3px;margin:20px auto 0;overflow:hidden}
+.pl-fill{height:100%;background:linear-gradient(90deg,var(--b5),var(--c4));border-radius:3px;animation:plFill 2s ease-in-out forwards}
+@keyframes plFill{0%{width:0}100%{width:100%}}
+.pl-txt{font-family:var(--fc);font-size:.72rem;color:var(--s400);margin-top:14px;letter-spacing:3px;text-transform:uppercase}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:9000;padding:15px 0;transition:all .4s ease}
+.nav.scrolled{background:rgba(12,22,41,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(37,99,235,.1);padding:10px 0}
+.nav-inner{max-width:1300px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-logo{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--b5);box-shadow:0 0 20px rgba(37,99,235,.2)}
+.nav-name{font-family:var(--fh);font-size:1.15rem;font-weight:700;color:var(--w);letter-spacing:.5px}
+.nav-name span{color:var(--b4)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-family:var(--fm);font-size:.82rem;font-weight:500;color:var(--s400);letter-spacing:.5px;transition:color var(--tr);position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--w)}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--b5);transition:width var(--tr)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta-btn{font-family:var(--fm);font-size:.78rem;font-weight:600;color:var(--w)!important;background:var(--b6);padding:10px 22px;border-radius:var(--rs);transition:all var(--tr);letter-spacing:.5px}
+.nav-cta-btn:hover{background:var(--b5);transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,99,235,.35)}
+.nav-cta-btn::after{display:none!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
+.hamburger span{width:24px;height:2px;background:var(--w);border-radius:2px;transition:all var(--tr)}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 30px 80px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(37,99,235,.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 80%,rgba(6,182,212,.08) 0%,transparent 50%)}
+.hero-particles{position:absolute;inset:0;overflow:hidden}
+.h-particle{position:absolute;width:3px;height:3px;background:var(--b4);border-radius:50%;opacity:.3;animation:floatP linear infinite}
+@keyframes floatP{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:.4}90%{opacity:.4}100%{transform:translateY(-10vh) rotate(720deg);opacity:0}}
+.hero-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2;width:100%}
+.hero-content{max-width:600px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--fc);font-size:.7rem;font-weight:500;color:var(--c4);background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);padding:8px 18px;border-radius:50px;margin-bottom:25px;letter-spacing:1.5px;text-transform:uppercase}
+.hero-badge i{font-size:.5rem;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-title{font-family:var(--fh);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;color:var(--w);line-height:1.15;margin-bottom:20px}
+.hero-title .ht-accent{color:var(--b4)}
+.hero-title .ht-line{display:block;font-size:clamp(1.1rem,2.5vw,1.6rem);font-family:var(--fc);font-weight:400;color:var(--s400);margin-top:10px;letter-spacing:1px}
+.ht-rotate{display:inline-block;min-width:220px;color:var(--c4)}
+.hero-desc{font-size:1rem;color:var(--s400);margin-bottom:35px;line-height:1.8;max-width:520px}
+.hero-btns{display:flex;gap:15px;flex-wrap:wrap}
+.btn-p{font-family:var(--fm);font-size:.85rem;font-weight:600;color:var(--w);background:linear-gradient(135deg,var(--b6),var(--b5));padding:14px 32px;border-radius:var(--rs);border:none;cursor:pointer;transition:all var(--tr);display:inline-flex;align-items:center;gap:8px}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(37,99,235,.4)}
+.btn-s{font-family:var(--fm);font-size:.85rem;font-weight:500;color:var(--s200);background:transparent;padding:14px 32px;border-radius:var(--rs);border:1px solid var(--s600);cursor:pointer;transition:all var(--tr);display:inline-flex;align-items:center;gap:8px}
+.btn-s:hover{border-color:var(--b5);color:var(--w);background:rgba(37,99,235,.08)}
+.hero-stats{display:flex;gap:35px;margin-top:45px;padding-top:35px;border-top:1px solid rgba(255,255,255,.06)}
+.hs-item{text-align:center}
+.hs-num{font-family:var(--fc);font-size:1.8rem;font-weight:700;color:var(--w);display:block}
+.hs-lbl{font-size:.72rem;color:var(--s500);letter-spacing:.5px;margin-top:2px}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:450px}
+.hv-orbit{position:relative;width:340px;height:340px}
+.hv-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid var(--b5);box-shadow:0 0 60px rgba(37,99,235,.3);z-index:5}
+.hv-ring{position:absolute;inset:-20px;border:1px solid rgba(37,99,235,.15);border-radius:50%;animation:spin 20s linear infinite}
+.hv-ring:nth-child(2){inset:-55px;border-color:rgba(6,182,212,.1);animation-duration:30s;animation-direction:reverse}
+.hv-ring:nth-child(3){inset:-90px;border-color:rgba(37,99,235,.07);animation-duration:40s}
+@keyframes spin{100%{transform:rotate(360deg)}}
+.hv-dot{position:absolute;width:8px;height:8px;background:var(--b4);border-radius:50%;box-shadow:0 0 15px var(--b5)}
+.hv-ring .hv-dot:nth-child(1){top:0;left:50%;transform:translateX(-50%)}
+.hv-ring .hv-dot:nth-child(2){bottom:0;left:50%;transform:translateX(-50%)}
+.hv-ring:nth-child(2) .hv-dot{background:var(--c4);box-shadow:0 0 15px var(--c5)}
+.hv-float{position:absolute;background:rgba(12,22,41,.85);backdrop-filter:blur(10px);border:1px solid rgba(37,99,235,.15);border-radius:var(--rl);padding:15px 20px;display:flex;align-items:center;gap:12px;animation:floatCard 6s ease-in-out infinite;z-index:6}
+.hv-float:nth-child(5){top:10%;right:-30px}
+.hv-float:nth-child(6){bottom:15%;left:-40px;animation-delay:2s}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hv-float i{font-size:1.2rem;color:var(--b4)}
+.hv-float-txt .hv-ft-num{font-family:var(--fc);font-size:1rem;font-weight:700;color:var(--w);display:block}
+.hv-float-txt .hv-ft-lbl{font-size:.65rem;color:var(--s500)}
+
+.trust{padding:50px 30px;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);background:rgba(18,32,59,.3)}
+.trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:.82rem;color:var(--s400)}
+.trust-item i{font-size:1.1rem;color:var(--b4)}
+
+.section{padding:100px 30px}
+.sec-header{text-align:center;max-width:700px;margin:0 auto 60px}
+.sec-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fc);font-size:.68rem;font-weight:500;color:var(--c4);background:rgba(6,182,212,.06);border:1px solid rgba(6,182,212,.15);padding:7px 16px;border-radius:50px;margin-bottom:16px;letter-spacing:1.5px;text-transform:uppercase}
+.sec-title{font-family:var(--fh);font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:700;color:var(--w);margin-bottom:16px;line-height:1.25}
+.sec-title span{color:var(--b4)}
+.sec-desc{font-size:.95rem;color:var(--s400);line-height:1.8}
+
+.vid-sec{background:linear-gradient(180deg,var(--n9) 0%,rgba(18,32,59,.5) 50%,var(--n9) 100%)}
+.vid-featured{max-width:900px;margin:0 auto 50px;position:relative;border-radius:var(--rl);overflow:hidden;border:1px solid rgba(37,99,235,.15);box-shadow:var(--sh)}
+.vid-featured video{width:100%;display:block;background:#000}
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1200px;margin:0 auto}
+.vid-card{position:relative;border-radius:var(--rl);overflow:hidden;border:1px solid rgba(37,99,235,.1);background:var(--n8);transition:all var(--tr)}
+.vid-card:hover{border-color:rgba(37,99,235,.25);transform:translateY(-3px)}
+.vid-card video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+.vid-overlay{position:absolute;inset:0;background:rgba(12,22,41,.6);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--tr)}
+.vid-overlay.hidden{opacity:0;pointer-events:none}
+.vid-play-btn{width:65px;height:65px;background:rgba(37,99,235,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all var(--tr);border:2px solid rgba(255,255,255,.25)}
+.vid-play-btn i{color:var(--w);font-size:1.3rem;margin-left:4px}
+.vid-overlay:hover .vid-play-btn{transform:scale(1.12);background:var(--b5);box-shadow:0 0 35px rgba(37,99,235,.5)}
+.vid-label{position:absolute;bottom:12px;left:12px;font-family:var(--fc);font-size:.65rem;color:var(--s400);background:rgba(12,22,41,.85);padding:5px 12px;border-radius:var(--rs);letter-spacing:.5px;z-index:3}
+
+.svc-sec{background:var(--n9)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;max-width:1200px;margin:0 auto}
+.svc-card{background:linear-gradient(145deg,var(--n8),rgba(27,49,84,.4));border:1px solid rgba(37,99,235,.08);border-radius:var(--rl);padding:40px 30px;transition:all .4s ease;position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--b5),var(--c4));transform:scaleX(0);transition:transform .4s ease;transform-origin:left}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card:hover{transform:translateY(-5px);border-color:rgba(37,99,235,.2);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.svc-icon{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:20px}
+.svc-icon.i1{background:rgba(37,99,235,.1);color:var(--b4)}
+.svc-icon.i2{background:rgba(6,182,212,.1);color:var(--c4)}
+.svc-icon.i3{background:rgba(16,185,129,.1);color:var(--em4)}
+.svc-icon.i4{background:rgba(244,63,94,.1);color:var(--ro5)}
+.svc-icon.i5{background:rgba(245,158,11,.1);color:var(--am4)}
+.svc-icon.i6{background:rgba(147,187,253,.1);color:var(--b3)}
+.svc-card h3{font-family:var(--fh);font-size:1.2rem;font-weight:600;color:var(--w);margin-bottom:12px}
+.svc-card p{font-size:.88rem;color:var(--s400);line-height:1.7}
+
+.proc-sec{background:linear-gradient(180deg,var(--n9),var(--n8))}
+.proc-steps{max-width:900px;margin:0 auto;position:relative}
+.proc-steps::before{content:'';position:absolute;left:30px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--b5),var(--c4),var(--em5))}
+.proc-step{display:flex;gap:30px;margin-bottom:40px;position:relative}
+.proc-num{width:60px;height:60px;min-width:60px;border-radius:50%;background:var(--n8);border:2px solid var(--b5);display:flex;align-items:center;justify-content:center;font-family:var(--fc);font-size:1.1rem;font-weight:700;color:var(--b4);position:relative;z-index:2}
+.proc-content{background:linear-gradient(145deg,var(--n8),rgba(27,49,84,.3));border:1px solid rgba(37,99,235,.1);border-radius:var(--rl);padding:28px;flex:1;transition:all var(--tr)}
+.proc-content:hover{border-color:rgba(37,99,235,.2);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.proc-content h3{font-family:var(--fh);font-size:1.15rem;font-weight:600;color:var(--w);margin-bottom:8px}
+.proc-content p{font-size:.88rem;color:var(--s400);line-height:1.7}
+
+.fa-sec{background:linear-gradient(180deg,var(--n9),rgba(18,32,59,.4),var(--n9))}
+.fa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1200px;margin:0 auto}
+.fa-card{background:linear-gradient(160deg,var(--n8),rgba(27,49,84,.5));border:1px solid rgba(37,99,235,.12);border-radius:16px;overflow:hidden;transition:all .5s cubic-bezier(.25,.46,.45,.94);position:relative}
+.fa-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--b5),var(--c4),var(--b5));background-size:200% 100%;animation:shimmer 3s linear infinite;opacity:0;transition:opacity .4s}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.fa-card:hover::before{opacity:1}
+.fa-card:hover{transform:translateY(-8px);border-color:rgba(37,99,235,.3);box-shadow:0 25px 60px rgba(0,0,0,.35),0 0 40px rgba(37,99,235,.08)}
+.fa-portrait-wrap{padding:30px 30px 0;display:flex;align-items:center;gap:20px}
+.fa-portrait-link{position:relative;flex-shrink:0}
+.fa-portrait{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid transparent;background-image:linear-gradient(var(--n8),var(--n8)),linear-gradient(135deg,var(--b5),var(--c4));background-origin:border-box;background-clip:content-box,border-box;cursor:pointer;transition:all .4s ease;display:block}
+.fa-portrait:hover{transform:scale(1.08);box-shadow:0 0 35px rgba(37,99,235,.4)}
+.fa-portrait-badge{position:absolute;bottom:4px;right:4px;width:28px;height:28px;background:var(--b6);border-radius:50%;display:flex;align-items:center;justify-content:center;border:3px solid var(--n8);z-index:2}
+.fa-portrait-badge i{color:var(--w);font-size:.6rem}
+.fa-info{flex:1;min-width:0}
+.fa-info h3{font-family:var(--fh);font-size:1.2rem;font-weight:700;color:var(--w);margin-bottom:6px;line-height:1.3}
+.fa-info p{font-size:.82rem;color:var(--s400);line-height:1.65}
+.fa-info-tag{display:inline-flex;align-items:center;gap:5px;font-family:var(--fc);font-size:.6rem;color:var(--c4);background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.15);padding:3px 10px;border-radius:50px;margin-bottom:8px;letter-spacing:.8px;text-transform:uppercase}
+.fa-book-wrap{padding:20px 25px 25px}
+.fa-book-link{display:block;position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(37,99,235,.1);transition:all .4s ease}
+.fa-book-link:hover{border-color:var(--b4);box-shadow:0 15px 40px rgba(0,0,0,.35);transform:translateY(-3px)}
+.fa-book-link img{width:100%;height:230px;object-fit:cover;display:block;transition:transform .5s ease}
+.fa-book-link:hover img{transform:scale(1.03)}
+.fa-book-link::after{content:'View on Amazon';position:absolute;bottom:0;left:0;right:0;padding:12px;background:linear-gradient(transparent,rgba(12,22,41,.92));font-family:var(--fm);font-size:.72rem;font-weight:600;color:var(--w);text-align:center;opacity:0;transition:opacity .3s;letter-spacing:.5px}
+.fa-book-link:hover::after{opacity:1}
+.fa-actions{padding:0 25px 25px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fa-amazon-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:.8rem;font-weight:600;color:var(--n9);background:linear-gradient(135deg,var(--am4),var(--am5));padding:10px 20px;border-radius:var(--rs);transition:all var(--tr)}
+.fa-amazon-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(245,158,11,.3)}
+.fa-amazon-btn i{font-size:1rem}
+.fa-hint{font-size:.68rem;color:var(--s500);font-style:italic}
+
+.team-sec{background:linear-gradient(180deg,var(--n9),var(--n8),var(--n9))}
+.team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;max-width:1300px;margin:0 auto}
+.tmc{background:linear-gradient(145deg,var(--n8),rgba(27,49,84,.4));border:1px solid rgba(37,99,235,.08);border-radius:var(--rl);padding:25px 18px;text-align:center;transition:all .4s ease;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.tmc.featured{border-color:rgba(37,99,235,.2);background:linear-gradient(145deg,rgba(27,49,84,.6),rgba(37,99,235,.08))}
+.tmc.featured::before{content:'FEATURED';position:absolute;top:10px;right:-25px;font-family:var(--fc);font-size:.5rem;font-weight:600;color:var(--w);background:var(--b6);padding:3px 30px;transform:rotate(45deg);letter-spacing:1px;z-index:2}
+.tmc:hover{transform:translateY(-5px);border-color:rgba(37,99,235,.25);box-shadow:0 15px 40px rgba(0,0,0,.3)}
+.tmc-img{width:85px;height:85px;border-radius:50%;object-fit:cover;object-position:center top;margin:0 auto 15px;border:3px solid rgba(37,99,235,.2);transition:all var(--tr)}
+.tmc:hover .tmc-img{border-color:var(--b4);box-shadow:0 0 25px rgba(37,99,235,.2)}
+.tmc h3{font-family:var(--fh);font-size:.95rem;font-weight:600;color:var(--w);margin-bottom:4px;line-height:1.3}
+.tmc .tmr{font-family:var(--fc);font-size:.65rem;color:var(--b4);letter-spacing:.5px;margin-bottom:10px;display:block}
+.tmb{font-size:.75rem;color:var(--s400);line-height:1.6;flex-grow:1}
+.tmm{display:inline-flex;align-items:center;gap:5px;margin-top:12px;font-family:var(--fm);font-size:.55rem;color:rgba(255,255,255,.42);letter-spacing:.3px;word-break:break-all;max-width:100%;text-align:center;justify-content:center;line-height:1.4;padding:6px 8px;background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.1);border-radius:var(--rs);transition:all .3s ease}
+.tmm:hover{color:var(--b3);background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.25)}
+.tmm i{flex-shrink:0;font-size:.6rem;color:var(--b4)}
+
+.test-sec{background:var(--n9)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1200px;margin:0 auto}
+.test-card{background:linear-gradient(145deg,var(--n8),rgba(27,49,84,.4));border:1px solid rgba(37,99,235,.1);border-radius:var(--rl);padding:30px;transition:all .4s ease;position:relative}
+.test-card:hover{transform:translateY(-4px);border-color:rgba(37,99,235,.2);box-shadow:0 15px 40px rgba(0,0,0,.25)}
+.test-card::before{content:'\201C';position:absolute;top:15px;right:25px;font-family:var(--fh);font-size:3rem;color:rgba(37,99,235,.1);line-height:1}
+.test-stars{color:var(--am4);font-size:.75rem;margin-bottom:15px;display:flex;gap:2px}
+.test-text{font-size:.9rem;color:#CBD5E1;line-height:1.8;margin-bottom:20px;font-style:italic}
+.test-author{display:flex;align-items:center;gap:15px}
+.test-portrait{width:55px;height:55px;border-radius:50%;object-fit:cover;border:3px solid var(--b5);cursor:pointer;transition:all var(--tr);flex-shrink:0}
+.test-portrait:hover{border-color:var(--c4);box-shadow:0 0 20px rgba(37,99,235,.3);transform:scale(1.08)}
+.test-a-info h4{font-family:var(--fh);font-size:.95rem;font-weight:600;color:var(--w)}
+.test-a-info p{font-size:.75rem;color:var(--s500)}
+.test-book{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.05)}
+.test-book-link{display:block;border-radius:var(--rs);overflow:hidden;border:1px solid rgba(37,99,235,.1);transition:all var(--tr)}
+.test-book-link:hover{border-color:var(--b5);box-shadow:0 10px 30px rgba(0,0,0,.3);transform:translateY(-2px)}
+.test-book-link img{width:100%;height:160px;object-fit:cover;display:block}
+.test-amazon{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:.72rem;font-weight:600;color:var(--am4);margin-top:10px;transition:all var(--tr)}
+.test-amazon:hover{color:var(--am5);transform:translateX(3px)}
+
+.genre-sec{background:linear-gradient(180deg,var(--n9),var(--n8))}
+.genre-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1100px;margin:0 auto}
+.genre-col{background:linear-gradient(145deg,var(--n8),rgba(27,49,84,.3));border:1px solid rgba(37,99,235,.1);border-radius:var(--rl);padding:35px}
+.genre-col h3{font-family:var(--fh);font-size:1.3rem;font-weight:600;color:var(--w);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.genre-col h3 i{color:var(--b4)}
+.genre-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.genre-list li{font-family:var(--fm);font-size:.78rem;color:#CBD5E1;background:rgba(37,99,235,.06);border:1px solid rgba(37,99,235,.1);padding:6px 14px;border-radius:50px;transition:all var(--tr)}
+.genre-list li:hover{background:rgba(37,99,235,.12);border-color:rgba(37,99,235,.25);color:var(--w)}
+
+.about-sec{background:var(--n9)}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:50px;align-items:center}
+.about-img{width:100%;max-width:350px;border-radius:var(--rl);border:2px solid rgba(37,99,235,.15);box-shadow:var(--sh)}
+.about-content h2{font-family:var(--fh);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--w);margin-bottom:20px;line-height:1.25}
+.about-content h2 span{color:var(--b4)}
+.about-content p{font-size:.92rem;color:var(--s400);line-height:1.8;margin-bottom:15px}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}
+.about-val{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:.82rem;color:#CBD5E1}
+.about-val i{color:var(--em4);font-size:.9rem}
+
+.faq-sec{background:linear-gradient(180deg,var(--n8),var(--n9))}
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border:1px solid rgba(37,99,235,.1);border-radius:var(--rl);margin-bottom:12px;overflow:hidden;background:rgba(18,32,59,.4);transition:all var(--tr)}
+.faq-item.open{border-color:rgba(37,99,235,.2)}
+.faq-q{padding:20px 25px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--fm);font-size:.92rem;font-weight:500;color:var(--s200);transition:color var(--tr)}
+.faq-q:hover{color:var(--w)}
+.faq-q i{color:var(--b4);transition:transform var(--tr);font-size:.8rem}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a-inner{padding:0 25px 20px;font-size:.88rem;color:var(--s400);line-height:1.8}
+
+.cta-banner{padding:80px 30px;background:linear-gradient(135deg,rgba(37,99,235,.15),rgba(6,182,212,.1));border-top:1px solid rgba(37,99,235,.1);border-bottom:1px solid rgba(37,99,235,.1);text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(37,99,235,.1) 0%,transparent 70%)}
+.cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.cta-logo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--b5);margin:0 auto 20px;box-shadow:0 0 30px rgba(37,99,235,.2)}
+.cta-inner h2{font-family:var(--fh);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--w);margin-bottom:15px}
+.cta-inner h2 span{color:var(--b4)}
+.cta-inner p{font-size:.95rem;color:var(--s400);margin-bottom:30px;line-height:1.7}
+
+.contact-sec{background:var(--n9)}
+.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.contact-form{background:linear-gradient(145deg,var(--n8),rgba(27,49,84,.4));border:1px solid rgba(37,99,235,.1);border-radius:var(--rl);padding:40px}
+.contact-form h3{font-family:var(--fh);font-size:1.4rem;font-weight:600;color:var(--w);margin-bottom:25px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-family:var(--fm);font-size:.78rem;font-weight:500;color:var(--s400);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;font-family:var(--fb);font-size:.88rem;color:var(--s200);background:rgba(12,22,41,.6);border:1px solid rgba(37,99,235,.15);border-radius:var(--rs);padding:12px 16px;transition:all var(--tr);outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--b5);box-shadow:0 0 15px rgba(37,99,235,.15)}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-group select option{background:var(--n8);color:var(--s200)}
+.form-submit{width:100%;font-family:var(--fm);font-size:.88rem;font-weight:600;color:var(--w);background:linear-gradient(135deg,var(--b6),var(--b5));padding:14px;border-radius:var(--rs);border:none;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center;gap:8px}
+.form-submit:hover{box-shadow:0 10px 30px rgba(37,99,235,.35);transform:translateY(-2px)}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.ci-card{background:linear-gradient(145deg,var(--n8),rgba(27,49,84,.3));border:1px solid rgba(37,99,235,.1);border-radius:var(--rl);padding:25px;display:flex;gap:18px;align-items:flex-start;transition:all var(--tr)}
+.ci-card:hover{border-color:rgba(37,99,235,.2)}
+.ci-icon{width:45px;height:45px;min-width:45px;border-radius:12px;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;color:var(--b4);font-size:1rem}
+.ci-card h4{font-family:var(--fm);font-size:.9rem;font-weight:600;color:var(--w);margin-bottom:4px}
+.ci-card p,.ci-card a{font-size:.82rem;color:var(--s400);line-height:1.6}
+.ci-card a:hover{color:var(--b4)}
+.ci-logo-card{text-align:center;padding:30px;flex-direction:column;align-items:center}
+.ci-logo-card img{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid var(--b5);margin:0 auto 15px;box-shadow:0 0 25px rgba(37,99,235,.2)}
+.ci-logo-card h4{font-family:var(--fh);font-size:1.1rem;color:var(--w);margin-bottom:5px}
+.ci-logo-card p{font-size:.78rem;color:var(--s400)}
+
+.footer{background:var(--n8);border-top:1px solid rgba(37,99,235,.1);padding:60px 30px 30px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:15px}
+.footer-brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--b5)}
+.footer-brand span{font-family:var(--fh);font-size:1.1rem;font-weight:700;color:var(--w)}
+.footer-desc{font-size:.82rem;color:var(--s500);line-height:1.7;margin-bottom:15px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:35px;height:35px;border-radius:50%;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.15);display:flex;align-items:center;justify-content:center;color:var(--s400);font-size:.85rem;transition:all var(--tr)}
+.footer-social a:hover{background:var(--b6);color:var(--w);border-color:var(--b5);transform:translateY(-3px)}
+.footer-col h4{font-family:var(--fm);font-size:.82rem;font-weight:600;color:var(--w);margin-bottom:15px;letter-spacing:.5px;text-transform:uppercase}
+.footer-col a{display:block;font-size:.82rem;color:var(--s500);margin-bottom:8px;transition:color var(--tr)}
+.footer-col a:hover{color:var(--b4)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:25px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:.75rem;color:var(--s600)}
+.footer-bottom a{font-size:.75rem;color:var(--s500);transition:color var(--tr)}
+.footer-bottom a:hover{color:var(--b4)}
+
+.btt{position:fixed;bottom:30px;right:30px;width:45px;height:45px;border-radius:50%;background:var(--b6);color:var(--w);border:none;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all var(--tr);z-index:8000;box-shadow:0 5px 20px rgba(37,99,235,.3)}
+.btt.visible{opacity:1;visibility:visible}
+.btt:hover{background:var(--b5);transform:translateY(-3px);box-shadow:0 8px 25px rgba(37,99,235,.4)}
+
+.sa{opacity:0;transform:translateY(40px);transition:all .7s cubic-bezier(.25,.46,.45,.94)}
+.sa.sal{transform:translateX(-40px)}
+.sa.sar{transform:translateX(40px)}
+.sa.visible{opacity:1;transform:translateY(0) translateX(0) scale(1)}
+
+@media(max-width:1100px){.team-grid{grid-template-columns:repeat(4,1fr)}.fa-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){
+.hero-inner{grid-template-columns:1fr;text-align:center}.hero-content{max-width:100%}.hero-desc{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-stats{justify-content:center}.hero-visual{display:none}
+.about-inner{grid-template-columns:1fr}.about-img{margin:0 auto}
+.contact-inner{grid-template-columns:1fr}
+.genre-cols{grid-template-columns:1fr}
+.footer-top{grid-template-columns:1fr 1fr}
+.team-grid{grid-template-columns:repeat(3,1fr)}
+.test-grid{grid-template-columns:1fr}
+.fa-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(12,22,41,.98);backdrop-filter:blur(20px);flex-direction:column;padding:20px 30px;gap:15px;border-bottom:1px solid rgba(37,99,235,.1)}
+.nav-links.open{display:flex}
+.hamburger{display:flex}
+.team-grid{grid-template-columns:repeat(2,1fr)}
+.proc-steps::before{left:28px}
+}
+@media(max-width:480px){.team-grid{grid-template-columns:1fr 1fr}.hero-stats{gap:20px}.footer-top{grid-template-columns:1fr}.fa-portrait{width:90px;height:90px}}
+</style>
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+<div class="pl-wrap">
+<img src="Apex logoC (1).jpg" alt="Apex Literary Team" class="pl-logo">
+<div class="pl-bar"><div class="pl-fill"></div></div>
+<div class="pl-txt">Loading Excellence</div>
+</div>
+</div>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a href="#" class="nav-brand"><img src="Apex logoC (1).jpg" alt="Apex Literary Team" class="nav-logo"><div class="nav-name">Apex <span>Literary</span></div></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#authors">Authors</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact" class="nav-cta-btn">Get Started</a></li>
+</ul>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+
+<section class="hero" id="hero">
+<div class="hero-bg"></div>
+<div class="hero-particles" id="heroParticles"></div>
+<div class="hero-inner">
+<div class="hero-content">
+<div class="hero-badge"><i class="fas fa-circle"></i> Premier Book Marketing Agency</div>
+<h1 class="hero-title">Elevate Your <span class="ht-accent">Author Brand</span><span class="ht-line">Professional <span class="ht-rotate" id="rotateText">Book Marketing</span></span></h1>
+<p class="hero-desc">Apex Literary Team is a collective of dedicated book marketing professionals. We specialize in cinematic book trailers, strategic author campaigns, and high-impact publishing solutions that help authors reach the right readers and build lasting visibility.</p>
+<div class="hero-btns"><a href="#contact" class="btn-p"><i class="fas fa-rocket"></i> Start Your Project</a><a href="#portfolio" class="btn-s"><i class="fas fa-play"></i> View Portfolio</a></div>
+<div class="hero-stats">
+<div class="hs-item"><span class="hs-num"><span class="counter" data-target="500">0</span>+</span><span class="hs-lbl">Books Marketed</span></div>
+<div class="hs-item"><span class="hs-num"><span class="counter" data-target="200">0</span>+</span><span class="hs-lbl">Author Partners</span></div>
+<div class="hs-item"><span class="hs-num"><span class="counter" data-target="26">0</span></span><span class="hs-lbl">Team Experts</span></div>
+<div class="hs-item"><span class="hs-num"><span class="counter" data-target="98">0</span>%</span><span class="hs-lbl">Satisfaction</span></div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hv-orbit">
+<div class="hv-ring"><div class="hv-dot"></div><div class="hv-dot"></div></div>
+<div class="hv-ring"><div class="hv-dot"></div><div class="hv-dot"></div></div>
+<div class="hv-ring"></div>
+<img src="Apex logoC (1).jpg" alt="Apex Literary Team" class="hv-center">
+<div class="hv-float"><i class="fas fa-star"></i><div class="hv-float-txt"><span class="hv-ft-num">4.9/5</span><span class="hv-ft-lbl">Client Rating</span></div></div>
+<div class="hv-float"><i class="fas fa-trophy"></i><div class="hv-float-txt"><span class="hv-ft-num">12+</span><span class="hv-ft-lbl">Years Combined</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="trust"><div class="trust-inner">
+<div class="trust-item"><i class="fas fa-shield-halved"></i> Trusted by 200+ Authors</div>
+<div class="trust-item"><i class="fas fa-award"></i> Industry Recognized</div>
+<div class="trust-item"><i class="fas fa-clock"></i> Fast Turnaround</div>
+<div class="trust-item"><i class="fas fa-handshake"></i> Dedicated Team Support</div>
+<div class="trust-item"><i class="fas fa-envelope"></i> Direct Email Communication</div>
+</div></div>
+
+<section class="section vid-sec" id="portfolio">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-film"></i> Portfolio Showcase</div><h2 class="sec-title">Our <span>Creative Work</span></h2><p class="sec-desc">Cinematic book trailers and marketing content crafted by our talented team to captivate audiences and drive book sales.</p></div>
+<div class="vid-featured sa">
+<video id="vid0" playsinline preload="metadata"><source src="main portfolio.mp4" type="video/mp4"></video>
+<div class="vid-overlay" data-vid="vid0"><div class="vid-play-btn"><i class="fas fa-play"></i></div></div>
+<div class="vid-label">Featured Showreel</div>
+</div>
+<div class="vid-grid">
+<div class="vid-card sa"><video id="vid1" playsinline preload="metadata"><source src="Website reference Video1.mp4" type="video/mp4"></video><div class="vid-overlay" data-vid="vid1"><div class="vid-play-btn"><i class="fas fa-play"></i></div></div><div class="vid-label">Campaign Highlight 1</div></div>
+<div class="vid-card sa"><video id="vid2" playsinline preload="metadata"><source src="Website reference Video2.mp4" type="video/mp4"></video><div class="vid-overlay" data-vid="vid2"><div class="vid-play-btn"><i class="fas fa-play"></i></div></div><div class="vid-label">Campaign Highlight 2</div></div>
+<div class="vid-card sa"><video id="vid3" playsinline preload="metadata"><source src="Website Reference Video3.mp4" type="video/mp4"></video><div class="vid-overlay" data-vid="vid3"><div class="vid-play-btn"><i class="fas fa-play"></i></div></div><div class="vid-label">Campaign Highlight 3</div></div>
+<div class="vid-card sa"><video id="vid4" playsinline preload="metadata"><source src="Website reference video4.mp4" type="video/mp4"></video><div class="vid-overlay" data-vid="vid4"><div class="vid-play-btn"><i class="fas fa-play"></i></div></div><div class="vid-label">Campaign Highlight 4</div></div>
+</div>
+</section>
+
+<section class="section svc-sec" id="services">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-cog"></i> What We Do</div><h2 class="sec-title">Our <span>Services</span></h2><p class="sec-desc">Comprehensive book marketing solutions from a team of specialists dedicated to author success.</p></div>
+<div class="svc-grid">
+<div class="svc-card sa"><div class="svc-icon i1"><i class="fas fa-video"></i></div><h3>Cinematic Book Trailers</h3><p>High-quality, genre-aligned video trailers designed to generate excitement, build anticipation, and attract readers before and after launch day.</p></div>
+<div class="svc-card sa"><div class="svc-icon i2"><i class="fas fa-bullhorn"></i></div><h3>Strategic Marketing Campaigns</h3><p>Data-driven marketing strategies tailored to your book's genre and target audience, maximizing visibility across all major platforms.</p></div>
+<div class="svc-card sa"><div class="svc-icon i3"><i class="fas fa-pen-nib"></i></div><h3>Professional Editing</h3><p>Developmental editing, copyediting, and proofreading services from experienced editors who understand genre conventions and reader expectations.</p></div>
+<div class="svc-card sa"><div class="svc-icon i4"><i class="fas fa-palette"></i></div><h3>Cover Design & Branding</h3><p>Eye-catching cover designs and cohesive author branding that positions your book for success in a competitive marketplace.</p></div>
+<div class="svc-card sa"><div class="svc-icon i5"><i class="fas fa-chart-line"></i></div><h3>Amazon Optimization</h3><p>Expert Amazon listing optimization including keyword research, category selection, and A+ content to boost discoverability and conversion rates.</p></div>
+<div class="svc-card sa"><div class="svc-icon i6"><i class="fas fa-book-open"></i></div><h3>Publishing Guidance</h3><p>End-to-end publishing support for both traditional and self-publishing paths, from manuscript preparation to distribution strategy.</p></div>
+</div>
+</section>
+
+<section class="section proc-sec">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-route"></i> Our Process</div><h2 class="sec-title">How We <span>Work</span></h2><p class="sec-desc">A proven five-step framework our team follows to deliver exceptional results for every author.</p></div>
+<div class="proc-steps">
+<div class="proc-step sa"><div class="proc-num">01</div><div class="proc-content"><h3>Discovery & Consultation</h3><p>We start by understanding your book, your goals, and your audience. Through a detailed email consultation, our team learns everything needed to craft a winning strategy.</p></div></div>
+<div class="proc-step sa"><div class="proc-num">02</div><div class="proc-content"><h3>Strategy Development</h3><p>Our strategists build a customized marketing plan aligned with your genre, target readers, and budget. Every element is designed to maximize impact and ROI.</p></div></div>
+<div class="proc-step sa"><div class="proc-num">03</div><div class="proc-content"><h3>Creative Production</h3><p>Our creative team brings the strategy to life with cinematic trailers, stunning visuals, compelling copy, and platform-ready marketing assets.</p></div></div>
+<div class="proc-step sa"><div class="proc-num">04</div><div class="proc-content"><h3>Campaign Launch</h3><p>We deploy your marketing campaign across targeted channels, monitor performance metrics in real time, and optimize for maximum reader engagement.</p></div></div>
+<div class="proc-step sa"><div class="proc-num">05</div><div class="proc-content"><h3>Analysis & Growth</h3><p>Post-campaign reporting with actionable insights, along with ongoing support and recommendations for sustained long-term author visibility and growth.</p></div></div>
+</div>
+</section>
+
+<section class="section fa-sec" id="authors">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-feather-pointed"></i> Featured Authors</div><h2 class="sec-title">Authors We <span>Champion</span></h2><p class="sec-desc">Talented authors whose stories we have helped bring to wider audiences through strategic marketing and cinematic campaigns.</p></div>
+<div class="fa-grid">
+<div class="fa-card sa">
+<div class="fa-portrait-wrap"><a href="https://www.amazon.com/stores/Emily-Winfield-Martin/author/B003V4BFTC" target="_blank" rel="noopener" class="fa-portrait-link"><img src="Emily Martin PPC.webp" alt="Emily Winfield Martin" class="fa-portrait"><div class="fa-portrait-badge"><i class="fas fa-check"></i></div></a><div class="fa-info"><div class="fa-info-tag"><i class="fas fa-star" style="font-size:.45rem"></i> Featured Author</div><h3>Emily Winfield Martin</h3><p>Bestselling author and illustrator known for enchanting picture books that capture the magic of childhood imagination and wonder.</p></div></div>
+<div class="fa-book-wrap"><a href="https://www.amazon.com/stores/Emily-Winfield-Martin/author/B003V4BFTC" target="_blank" rel="noopener" class="fa-book-link"><img src="Emily Martin BookC.jpg" alt="Emily Winfield Martin Book"></a><div class="fa-actions"><a href="https://www.amazon.com/stores/Emily-Winfield-Martin/author/B003V4BFTC" target="_blank" rel="noopener" class="fa-amazon-btn"><i class="fab fa-amazon"></i> View on Amazon</a><span class="fa-hint">Click portrait or book to visit</span></div></div>
+</div>
+<div class="fa-card sa">
+<div class="fa-portrait-wrap"><a href="https://www.amazon.com/stores/Diane-Alber/author/B07D4F5ND9" target="_blank" rel="noopener" class="fa-portrait-link"><img src="Daine Alber PPC.jpg" alt="Diane Alber" class="fa-portrait"><div class="fa-portrait-badge"><i class="fas fa-check"></i></div></a><div class="fa-info"><div class="fa-info-tag"><i class="fas fa-star" style="font-size:.45rem"></i> Featured Author</div><h3>Diane Alber</h3><p>Award-winning children's book author creating stories that teach empathy, kindness, and emotional intelligence to young readers.</p></div></div>
+<div class="fa-book-wrap"><a href="https://www.amazon.com/stores/Diane-Alber/author/B07D4F5ND9" target="_blank" rel="noopener" class="fa-book-link"><img src="Daine Alber BookC.webp" alt="Diane Alber Book"></a><div class="fa-actions"><a href="https://www.amazon.com/stores/Diane-Alber/author/B07D4F5ND9" target="_blank" rel="noopener" class="fa-amazon-btn"><i class="fab fa-amazon"></i> View on Amazon</a><span class="fa-hint">Click portrait or book to visit</span></div></div>
+</div>
+<div class="fa-card sa">
+<div class="fa-portrait-wrap"><a href="https://www.amazon.com/stores/Rachael-C.-Duncan/author/B017OM3KRY" target="_blank" rel="noopener" class="fa-portrait-link"><img src="Rachael Duncan PPB.jpg" alt="Rachael C. Duncan" class="fa-portrait"><div class="fa-portrait-badge"><i class="fas fa-check"></i></div></a><div class="fa-info"><div class="fa-info-tag"><i class="fas fa-star" style="font-size:.45rem"></i> Featured Author</div><h3>Rachael C. Duncan</h3><p>Bestselling romance author crafting deeply emotional love stories that resonate with readers across the globe.</p></div></div>
+<div class="fa-book-wrap"><a href="https://www.amazon.com/stores/Rachael-C.-Duncan/author/B017OM3KRY" target="_blank" rel="noopener" class="fa-book-link"><img src="Rachael Duncan BookP.webp" alt="Rachael C. Duncan Book"></a><div class="fa-actions"><a href="https://www.amazon.com/stores/Rachael-C.-Duncan/author/B017OM3KRY" target="_blank" rel="noopener" class="fa-amazon-btn"><i class="fab fa-amazon"></i> View on Amazon</a><span class="fa-hint">Click portrait or book to visit</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="section team-sec" id="team">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-users"></i> Meet the Team</div><h2 class="sec-title">Our <span>Expert Team</span></h2><p class="sec-desc">A collective of 26 dedicated professionals with diverse specialties, united by a shared passion for helping authors succeed.</p></div>
+<div class="team-grid">
+
+<div class="tmc featured sa"><img src="Claire Paul.jpg" alt="Claire Paul" class="tmc-img"><h3>Claire Paul</h3><span class="tmr">Founder & Book Editor</span><p class="tmb">A book marketing promotion specialist and the creative force behind Apex Literary Team. She helps authors bring their stories to life through cinematic trailers and high-impact visual campaigns designed to build anticipation, strengthen branding, and attract more readers.</p><a href="mailto:clairepaul@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> clairepaul@apexliteraryteam.com</a></div>
+
+<div class="tmc featured sa"><img src="headshot1.png" alt="Rebecca Sterling" class="tmc-img"><h3>Rebecca Sterling</h3><span class="tmr">Co-Founder & Creative Director</span><p class="tmb">Specializing in cinematic book trailers and high-impact author marketing. She helps authors translate the heart of their stories into compelling visual campaigns that spark interest, strengthen brand identity, and increase discoverability.</p><a href="mailto:rebecca@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> rebecca@apexliteraryteam.com</a></div>
+
+<div class="tmc featured sa"><img src="Michael.jpeg" alt="Michael Edward" class="tmc-img"><h3>Michael Edward</h3><span class="tmr">Book Marketer | Publishing & Editing Expert</span><p class="tmb">A young, energetic professional passionate about helping authors polish their books, position them for the right audience, and turn great stories into marketable books. He brings strategy, fresh ideas, and serious energy to every project.</p><a href="mailto:michael@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> michael@apexliteraryteam.com</a></div>
+
+<div class="tmc featured sa"><img src="thomas.png" alt="Thomas Wormald" class="tmc-img"><h3>Thomas Wormald</h3><span class="tmr">Book Editor & Publisher</span><p class="tmb">An experienced editor and publisher dedicated to helping authors refine their manuscripts and navigate the publishing landscape with confidence and clarity.</p><a href="mailto:thomaswormald@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> thomaswormald@apexliteraryteam.com</a></div>
+
+<div class="tmc featured sa"><img src="Evelyn Brooks.jpg" alt="Evelyn Brooks" class="tmc-img"><h3>Evelyn Brooks</h3><span class="tmr">Team Member</span><p class="tmb">A dedicated team member contributing her expertise to ensure every author campaign runs smoothly and delivers measurable results.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Fheadshot cut out.webp" alt="Jullian Fairmont" class="tmc-img"><h3>Jullian Fairmont</h3><span class="tmr">Book Marketing Strategist</span><p class="tmb">Crafting data-driven marketing strategies that connect books with their ideal readers across multiple platforms.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Joel Benson.jpg" alt="Joel Benson" class="tmc-img"><h3>Joel Benson</h3><span class="tmr">Team Member</span><p class="tmb">Supporting author campaigns with reliable project coordination and creative problem-solving skills.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="angeles.jpg" alt="Angeles McClaine" class="tmc-img"><h3>Angeles McClaine</h3><span class="tmr">Team Member</span><p class="tmb">Bringing organizational excellence and creative insight to every project she touches on the team.</p><a href="mailto:angeles@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> angeles@apexliteraryteam.com</a></div>
+
+<div class="tmc sa"><img src="female headshot C.png" alt="Natalie Brooks" class="tmc-img"><h3>Natalie Brooks</h3><span class="tmr">Team Member</span><p class="tmb">Contributing fresh perspectives and dedicated support to author marketing initiatives.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Mary Martin.jpg" alt="Mary Martin" class="tmc-img"><h3>Mary Martin</h3><span class="tmr">Team Member</span><p class="tmb">A dependable professional ensuring quality and consistency across all team deliverables.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Dominique Gareth.jpg" alt="Dominique Gareth" class="tmc-img"><h3>Dominique Gareth</h3><span class="tmr">Team Member</span><p class="tmb">Enhancing campaign execution with attention to detail and a commitment to excellence.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Rachel Morgan.jpg" alt="Rachel Morgan" class="tmc-img"><h3>Rachel Morgan</h3><span class="tmr">Team Member</span><p class="tmb">Bringing creativity and strategic thinking to author branding and marketing campaigns.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Sarah Lawson.jpg" alt="Sarah Lawson" class="tmc-img"><h3>Sarah Lawson</h3><span class="tmr">Team Member</span><p class="tmb">Supporting content creation and campaign management with professionalism and enthusiasm.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Susan Olivia.png" alt="Susan Olivia" class="tmc-img"><h3>Susan Olivia</h3><span class="tmr">Team Member</span><p class="tmb">Contributing editorial and marketing expertise to help authors achieve their publishing goals.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Naomi Ellis.png" alt="Naomi Ellis" class="tmc-img"><h3>Naomi Ellis</h3><span class="tmr">Team Member</span><p class="tmb">Dedicated to providing thoughtful support and creative solutions for every author engagement.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Roberta.jpg" alt="Roberta Lumpkin" class="tmc-img"><h3>Roberta Lumpkin</h3><span class="tmr">Team Member</span><p class="tmb">A reliable contributor focused on delivering high-quality outcomes for author marketing projects.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Jessica Laane.jpg" alt="Jessica Lane" class="tmc-img"><h3>Jessica Lane</h3><span class="tmr">Team Member</span><p class="tmb">Bringing energy and precision to campaign logistics and author communication efforts.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="micheal22.jpg" alt="Richard Martin" class="tmc-img"><h3>Richard Martin</h3><span class="tmr">Team Member</span><p class="tmb">Providing analytical insight and strategic support to enhance campaign performance and author reach.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="Victoriahenderson.jpeg" alt="Victoria Henderson" class="tmc-img"><h3>Victoria Henderson</h3><span class="tmr">Team Member</span><p class="tmb">Contributing organizational talent and creative direction to collaborative team efforts.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="jonathan.jpeg" alt="Jonathan Desjardin" class="tmc-img"><h3>Jonathan Desjardin</h3><span class="tmr">Team Member</span><p class="tmb">A versatile team player bringing technical skills and marketing knowledge to every project.</p><a href="mailto:jonathan@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> jonathan@apexliteraryteam.com</a></div>
+
+<div class="tmc sa"><img src="Ruthmccants.jpeg" alt="Ruth McCants" class="tmc-img"><h3>Ruth McCants</h3><span class="tmr">Team Member</span><p class="tmb">Ensuring project timelines and quality standards are consistently met with professionalism.</p><a href="mailto:mccants@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> mccants@apexliteraryteam.com</a></div>
+
+<div class="tmc sa"><img src="jennetjefferson.jpeg" alt="Janet Jefferson" class="tmc-img"><h3>Janet Jefferson</h3><span class="tmr">Team Member</span><p class="tmb">Dedicated to author success through meticulous attention to detail and proactive communication.</p><a href="mailto:janet@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> janet@apexliteraryteam.com</a></div>
+
+<div class="tmc sa"><img src="Dorman.jpg" alt="Julie Dorman" class="tmc-img"><h3>Julie Dorman</h3><span class="tmr">Team Member</span><p class="tmb">Bringing collaborative spirit and a keen eye for quality to every stage of the marketing process.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+<div class="tmc sa"><img src="erica.png" alt="Erica Mullikin" class="tmc-img"><h3>Erica Mullikin</h3><span class="tmr">Team Member</span><p class="tmb">Providing creative support and operational efficiency to ensure seamless project delivery.</p><a href="mailto:erica@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> erica@apexliteraryteam.com</a></div>
+
+<div class="tmc sa"><img src="mary.jpg" alt="Mary Benfield" class="tmc-img"><h3>Mary Benfield</h3><span class="tmr">Team Member</span><p class="tmb">A resourceful professional supporting the team with strong organizational skills and a passion for author success.</p><a href="mailto:marybenfield@apexliteraryteam.com" class="tmm"><i class="fas fa-envelope"></i> marybenfield@apexliteraryteam.com</a></div>
+
+<div class="tmc sa"><img src="Gloria Herman.jpeg" alt="Gloria Herman" class="tmc-img"><h3>Gloria Herman</h3><span class="tmr">Team Member</span><p class="tmb">A committed professional adding depth and reliability to the Apex Literary Team roster.</p><a href="mailto:apexliteraryteam@gmail.com" class="tmm"><i class="fas fa-envelope"></i> Contact</a></div>
+
+</div>
+</section>
+
+<section class="section test-sec" id="testimonials">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-quote-left"></i> Testimonials</div><h2 class="sec-title">What <span>Authors Say</span></h2><p class="sec-desc">Hear from published authors who trusted Apex Literary Team to elevate their book marketing and author brand.</p></div>
+<div class="test-grid">
+<div class="test-card sa">
+<div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="test-text">"The Apex Literary Team transformed my book launch into something truly magical. Their cinematic trailer captured the essence of my story perfectly, and the marketing strategy they built drove incredible engagement. I could not have asked for a better team."</p>
+<div class="test-author"><a href="https://www.amazon.com/stores/Emily-Winfield-Martin/author/B003V4BFTC" target="_blank" rel="noopener"><img src="Emily Martin PPC.webp" alt="Emily Winfield Martin" class="test-portrait"></a><div class="test-a-info"><h4>Emily Winfield Martin</h4><p>Bestselling Author & Illustrator</p></div></div>
+<div class="test-book"><a href="https://www.amazon.com/stores/Emily-Winfield-Martin/author/B003V4BFTC" target="_blank" rel="noopener" class="test-book-link"><img src="Emily Martin BookC.jpg" alt="Emily Winfield Martin Book"></a><a href="https://www.amazon.com/stores/Emily-Winfield-Martin/author/B003V4BFTC" target="_blank" rel="noopener" class="test-amazon"><i class="fab fa-amazon"></i> View on Amazon <i class="fas fa-arrow-right" style="font-size:.6rem"></i></a></div>
+</div>
+<div class="test-card sa">
+<div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="test-text">"Working with the Apex Literary Team was a game-changer. They understood my vision from day one and created marketing materials that truly resonated with my audience. The professionalism and creativity of this team is unmatched in the industry."</p>
+<div class="test-author"><a href="https://www.amazon.com/stores/Diane-Alber/author/B07D4F5ND9" target="_blank" rel="noopener"><img src="Daine Alber PPC.jpg" alt="Diane Alber" class="test-portrait"></a><div class="test-a-info"><h4>Diane Alber</h4><p>Award-Winning Children's Author</p></div></div>
+<div class="test-book"><a href="https://www.amazon.com/stores/Diane-Alber/author/B07D4F5ND9" target="_blank" rel="noopener" class="test-book-link"><img src="Daine Alber BookC.webp" alt="Diane Alber Book"></a><a href="https://www.amazon.com/stores/Diane-Alber/author/B07D4F5ND9" target="_blank" rel="noopener" class="test-amazon"><i class="fab fa-amazon"></i> View on Amazon <i class="fas fa-arrow-right" style="font-size:.6rem"></i></a></div>
+</div>
+<div class="test-card sa">
+<div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="test-text">"Apex Literary Team brought my romance novels to readers I never thought I could reach. Their strategic approach to Amazon optimization and social media marketing delivered results that exceeded every expectation. Truly a team of dedicated professionals."</p>
+<div class="test-author"><a href="https://www.amazon.com/stores/Rachael-C.-Duncan/author/B017OM3KRY" target="_blank" rel="noopener"><img src="Rachael Duncan PPB.jpg" alt="Rachael C. Duncan" class="test-portrait"></a><div class="test-a-info"><h4>Rachael C. Duncan</h4><p>Bestselling Romance Author</p></div></div>
+<div class="test-book"><a href="https://www.amazon.com/stores/Rachael-C.-Duncan/author/B017OM3KRY" target="_blank" rel="noopener" class="test-book-link"><img src="Rachael Duncan BookP.webp" alt="Rachael C. Duncan Book"></a><a href="https://www.amazon.com/stores/Rachael-C.-Duncan/author/B017OM3KRY" target="_blank" rel="noopener" class="test-amazon"><i class="fab fa-amazon"></i> View on Amazon <i class="fas fa-arrow-right" style="font-size:.6rem"></i></a></div>
+</div>
+</div>
+</section>
+
+<section class="section genre-sec">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-book"></i> Genres We Cover</div><h2 class="sec-title">Every <span>Genre</span>, Every Story</h2><p class="sec-desc">Our team has expertise across all major fiction and non-fiction genres, ensuring specialized marketing for your unique book.</p></div>
+<div class="genre-cols">
+<div class="genre-col sa"><h3><i class="fas fa-wand-magic-sparkles"></i> Fiction</h3><ul class="genre-list"><li>Romance</li><li>Mystery & Thriller</li><li>Science Fiction</li><li>Fantasy</li><li>Historical Fiction</li><li>Literary Fiction</li><li>Horror</li><li>Young Adult</li><li>Children's Books</li><li>Women's Fiction</li><li>Dystopian</li><li>Adventure</li></ul></div>
+<div class="genre-col sa"><h3><i class="fas fa-lightbulb"></i> Non-Fiction</h3><ul class="genre-list"><li>Self-Help</li><li>Memoir</li><li>Business & Finance</li><li>Health & Wellness</li><li>Biography</li><li>True Crime</li><li>Spirituality</li><li>Cookbooks</li><li>Travel</li><li>Education</li><li>Parenting</li><li>Personal Development</li></ul></div>
+</div>
+</section>
+
+<section class="section about-sec" id="about">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-heart"></i> About Us</div><h2 class="sec-title">The <span>Apex</span> Difference</h2></div>
+<div class="about-inner">
+<div class="sa sal"><img src="Apex logoC (1).jpg" alt="Apex Literary Team" class="about-img"></div>
+<div class="about-content sa sar">
+<h2>A Team Dedicated to <span>Author Success</span></h2>
+<p>Apex Literary Team is a collective of 26 passionate book marketing professionals united by a singular mission: helping authors transform their manuscripts into marketable, reader-ready books that stand out in today's competitive publishing landscape.</p>
+<p>Founded by Claire Paul and co-led by Rebecca Sterling, our team combines deep publishing industry knowledge with cutting-edge digital marketing strategies. We believe every author deserves a professional partner who understands their vision and has the expertise to bring it to life.</p>
+<p>All client communication is handled via email for full documentation and accountability. We are committed to transparency, professionalism, and measurable results for every author we work with.</p>
+<div class="about-values">
+<div class="about-val"><i class="fas fa-check-circle"></i> Strategy-First Approach</div>
+<div class="about-val"><i class="fas fa-check-circle"></i> Genre Expertise</div>
+<div class="about-val"><i class="fas fa-check-circle"></i> Transparent Communication</div>
+<div class="about-val"><i class="fas fa-check-circle"></i> Measurable Results</div>
+<div class="about-val"><i class="fas fa-check-circle"></i> Team Collaboration</div>
+<div class="about-val"><i class="fas fa-check-circle"></i> Author-Centric Focus</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section faq-sec" id="faq">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-circle-question"></i> FAQ</div><h2 class="sec-title">Frequently Asked <span>Questions</span></h2><p class="sec-desc">Answers to common questions about working with the Apex Literary Team.</p></div>
+<div class="faq-list">
+<div class="faq-item sa"><div class="faq-q">What services does Apex Literary Team offer?<i class="fas fa-chevron-down"></i></div><div class="faq-a"><div class="faq-a-inner">We offer comprehensive book marketing services including cinematic book trailers, strategic marketing campaigns, professional editing, cover design, Amazon optimization, publishing guidance, and author branding. Our team of 26 specialists covers every aspect of book promotion.</div></div></div>
+<div class="faq-item sa"><div class="faq-q">How do I get started with your team?<i class="fas fa-chevron-down"></i></div><div class="faq-a"><div class="faq-a-inner">Simply fill out our contact form or email us directly at apexliteraryteam@gmail.com. We will schedule a consultation to discuss your book, your goals, and how our team can help. All communication is handled via email for documentation and accountability.</div></div></div>
+<div class="faq-item sa"><div class="faq-q">How much do your services cost?<i class="fas fa-chevron-down"></i></div><div class="faq-a"><div class="faq-a-inner">Every project is unique, and we tailor our services to fit your specific needs and budget. Please email us for a personalized quote. We will work with you to find the right package that aligns with your goals and resources.</div></div></div>
+<div class="faq-item sa"><div class="faq-q">What genres do you work with?<i class="fas fa-chevron-down"></i></div><div class="faq-a"><div class="faq-a-inner">Our team has expertise across all major fiction and non-fiction genres including romance, mystery, thriller, fantasy, science fiction, children's books, self-help, memoir, business, health, and many more. We adapt our marketing strategies to suit each genre's unique audience.</div></div></div>
+<div class="faq-item sa"><div class="faq-q">How long does a typical project take?<i class="fas fa-chevron-down"></i></div><div class="faq-a"><div class="faq-a-inner">Project timelines vary based on scope and complexity. A cinematic book trailer typically takes 2 to 4 weeks, while a full marketing campaign can span several months. We provide clear timelines during our initial consultation and keep you updated throughout the process.</div></div></div>
+<div class="faq-item sa"><div class="faq-q">Do you work with self-published and traditionally published authors?<i class="fas fa-chevron-down"></i></div><div class="faq-a"><div class="faq-a-inner">Absolutely. Our team works with authors at every stage of their publishing journey, whether self-published, hybrid, or traditionally published. We tailor our approach to complement your publishing path and maximize your book's market potential.</div></div></div>
+<div class="faq-item sa"><div class="faq-q">Why is all communication handled via email?<i class="fas fa-chevron-down"></i></div><div class="faq-a"><div class="faq-a-inner">We handle all client communication via email to ensure full documentation and accountability. This approach creates a clear record of all discussions, agreements, and project details, protecting both our team and our authors throughout the collaboration.</div></div></div>
+</div>
+</section>
+
+<div class="cta-banner">
+<div class="cta-inner sa">
+<img src="Apex logoC (1).jpg" alt="Apex Literary Team" class="cta-logo">
+<h2>Ready to Elevate Your <span>Author Brand</span>?</h2>
+<p>Join 200+ authors who trust the Apex Literary Team to market their books, build their brand, and connect with readers worldwide. Email us today for a personalized quote.</p>
+<a href="#contact" class="btn-p"><i class="fas fa-paper-plane"></i> Get Your Free Consultation</a>
+</div>
+</div>
+
+<section class="section contact-sec" id="contact">
+<div class="sec-header sa"><div class="sec-badge"><i class="fas fa-paper-plane"></i> Get in Touch</div><h2 class="sec-title">Start Your <span>Project</span></h2><p class="sec-desc">Ready to work with our team? Fill out the form below or email us directly. We respond within 24 hours.</p></div>
+<div class="contact-inner">
+<div class="contact-form sa sal">
+<h3>Send Us a Message</h3>
+<form action="https://formspree.io/f/xrpgkwga" method="POST">
+<input type="hidden" name="_subject" value="New Proposal - Apex Literary Team">
+<div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required></div>
+<div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="your@email.com" required></div>
+<div class="form-group"><label>Service Interested In</label><select name="service" required><option value="">Select a service</option><option value="Book Trailer">Cinematic Book Trailer</option><option value="Marketing Campaign">Marketing Campaign</option><option value="Editing">Professional Editing</option><option value="Cover Design">Cover Design & Branding</option><option value="Amazon Optimization">Amazon Optimization</option><option value="Publishing Guidance">Publishing Guidance</option><option value="Full Package">Full Package</option><option value="Other">Other</option></select></div>
+<div class="form-group"><label>Book Genre</label><input type="text" name="genre" placeholder="e.g., Romance, Mystery, Self-Help"></div>
+<div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Share details about your book, goals, and how we can help..." required></textarea></div>
+<button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+</form>
+</div>
+<div class="contact-info sa sar">
+<div class="ci-logo-card ci-card"><img src="Apex logoC (1).jpg" alt="Apex Literary Team"><h4>Apex Literary Team</h4><p>Professional Book Marketing Agency</p></div>
+<div class="ci-card"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email Us</h4><a href="mailto:apexliteraryteam@gmail.com">apexliteraryteam@gmail.com</a><p>We respond within 24 hours</p></div></div>
+<div class="ci-card"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><h4>Business Hours</h4><p>Monday to Friday: 9:00 AM to 6:00 PM EST</p><p>Weekend: Available via email</p></div></div>
+<div class="ci-card"><div class="ci-icon"><i class="fas fa-shield-halved"></i></div><div><h4>Our Commitment</h4><p>All communication handled via email for full documentation and accountability. Your project details are always protected.</p></div></div>
+<div class="ci-card"><div class="ci-icon"><i class="fas fa-users"></i></div><div><h4>Team Support</h4><p>26 dedicated professionals ready to help you succeed. Email any team member directly using the addresses on our team page.</p></div></div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-top">
+<div><div class="footer-brand"><img src="Apex logoC (1).jpg" alt="Apex Literary Team"><span>Apex Literary Team</span></div><p class="footer-desc">A team of 26 book marketing professionals dedicated to helping authors build their brand, reach more readers, and achieve lasting success in the publishing world.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div></div>
+<div class="footer-col"><h4>Services</h4><a href="#services">Book Trailers</a><a href="#services">Marketing Campaigns</a><a href="#services">Professional Editing</a><a href="#services">Cover Design</a><a href="#services">Amazon Optimization</a><a href="#services">Publishing Guidance</a></div>
+<div class="footer-col"><h4>Company</h4><a href="#about">About Us</a><a href="#team">Our Team</a><a href="#portfolio">Portfolio</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<div class="footer-col"><h4>Contact</h4><a href="mailto:apexliteraryteam@gmail.com"><i class="fas fa-envelope" style="margin-right:5px"></i> apexliteraryteam@gmail.com</a><a href="#team"><i class="fas fa-users" style="margin-right:5px"></i> Meet Our Team</a><a href="#contact"><i class="fas fa-paper-plane" style="margin-right:5px"></i> Send a Message</a></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2025 Apex Literary Team. All rights reserved.</p><div><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></div></div>
+</div>
+</footer>
+
+<button class="btt" id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+window.addEventListener('load',()=>{setTimeout(()=>{document.body.classList.add('loaded')},2200)});
+
+(function(){const c=document.getElementById('heroParticles');for(let i=0;i<50;i++){const p=document.createElement('div');p.className='h-particle';p.style.left=Math.random()*100+'%';p.style.animationDuration=(Math.random()*15+10)+'s';p.style.animationDelay=Math.random()*15+'s';p.style.width=p.style.height=(Math.random()*3+1)+'px';c.appendChild(p)}})();
+
+(function(){const words=['Book Marketing','Author Branding','Book Trailers','Publishing Support','Reader Outreach','Campaign Strategy'];let i=0;const el=document.getElementById('rotateText');el.style.transition='all .4s ease';setInterval(()=>{el.style.opacity=0;el.style.transform='translateY(10px)';setTimeout(()=>{i=(i+1)%words.length;el.textContent=words[i];el.style.opacity=1;el.style.transform='translateY(0)'},400)},3000)})();
+
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+
+document.getElementById('hamburger').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
+
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{const y=window.scrollY+120;sections.forEach(s=>{const t=s.offsetTop,h=s.offsetHeight,id=s.getAttribute('id');document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+id&&y>=t&&y<t+h)a.classList.add('active')})})});
+
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{btt.classList.toggle('visible',window.scrollY>600)});
+btt.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+function animateCounters(){document.querySelectorAll('.counter').forEach(c=>{const target=+c.dataset.target;if(c.dataset.done)return;const rect=c.getBoundingClientRect();if(rect.top<window.innerHeight&&rect.bottom>0){c.dataset.done='1';let current=0;const step=target/60;const timer=setInterval(()=>{current+=step;if(current>=target){current=target;clearInterval(timer)}c.textContent=Math.floor(current)},25)}})}
+window.addEventListener('scroll',animateCounters);animateCounters();
+
+const saObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');saObs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.sa').forEach(el=>saObs.observe(el));
+
+let currentVideo=null;
+document.querySelectorAll('.vid-overlay').forEach(overlay=>{overlay.addEventListener('click',function(){const vid=document.getElementById(this.dataset.vid);if(currentVideo&&currentVideo!==vid){currentVideo.pause();const po=currentVideo.parentElement.querySelector('.vid-overlay');if(po)po.classList.remove('hidden')}if(vid.paused){vid.play();this.classList.add('hidden');currentVideo=vid}else{vid.pause();this.classList.remove('hidden');currentVideo=null}})});
+document.querySelectorAll('video').forEach(v=>{v.addEventListener('click',function(){if(!this.paused){this.pause();const o=this.parentElement.querySelector('.vid-overlay');if(o)o.classList.remove('hidden');if(currentVideo===this)currentVideo=null}})});
+const vidObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(!e.isIntersecting){const v=e.target.querySelector('video');if(v&&!v.paused){v.pause();const o=e.target.querySelector('.vid-overlay');if(o)o.classList.remove('hidden');if(currentVideo===v)currentVideo=null}}})},{threshold:0.3});
+document.querySelectorAll('.vid-featured,.vid-card').forEach(el=>vidObs.observe(el));
+document.querySelectorAll('video').forEach(v=>{v.addEventListener('ended',function(){const o=this.parentElement.querySelector('.vid-overlay');if(o)o.classList.remove('hidden');if(currentVideo===this)currentVideo=null})});
+
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',function(){const item=this.parentElement,ans=item.querySelector('.faq-a'),isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(fi=>{fi.classList.remove('open');fi.querySelector('.faq-a').style.maxHeight=null});if(!isOpen){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}})});
+</script>
+</body>
+</html>
